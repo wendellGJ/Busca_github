@@ -1,5 +1,4 @@
 import { Grid, Typography } from '@material-ui/core';
-import Paper from '@material-ui/core/Paper';
 import React from 'react';
 import images from '../../assets/imgs';
 import { useStyles } from './styles';
@@ -7,7 +6,7 @@ import { useStyles } from './styles';
 /**
  *
  * @Footer Componente responsável pelo footer da aplicacao
- * @CriadoEm 19/08/2020
+ * @CriadoEm 27/06/2021
  */
 export default function Footer() {
   const classes = useStyles();
