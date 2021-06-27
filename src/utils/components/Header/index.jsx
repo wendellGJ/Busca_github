@@ -17,11 +17,11 @@ export default function Footer() {
         <Grid item xs={3}>
           <img src={images.GithubBig} alt="logo" className={classes.logo} />
         </Grid>
-        <Grid item xs={2} />
-        <Grid item xs={3}>
+        <Grid item xs={1} sm={2} />
+        <Grid item xs={7} sm={5}>
           <Typography className={classes.txtCompanhia}>Busa Usuáros Github</Typography>
         </Grid>
-        <Grid item xs={4} />
+        <Grid item xs={1} sm={2} />
       </Grid>
     </div>
   );

@@ -5,7 +5,7 @@ export const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   containerFooterAbaixo: {
-    backgroundColor: '#003040',
+    backgroundColor: '#FAC21C',
     padding: theme.spacing(1, 4),
   },
   containerLogo: {
