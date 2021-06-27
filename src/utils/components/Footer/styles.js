@@ -5,7 +5,6 @@ export const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   containerFooterAbaixo: {
-    maxWidth: 1200,
     backgroundColor: '#003040',
     padding: theme.spacing(1, 4),
   },
