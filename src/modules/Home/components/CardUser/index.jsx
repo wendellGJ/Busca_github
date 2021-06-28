@@ -5,7 +5,6 @@ import { useStyles } from './styles';
 
 export default function CardUser() {
   const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
   const userState = useSelector((state) => state.user);
 
   return (
