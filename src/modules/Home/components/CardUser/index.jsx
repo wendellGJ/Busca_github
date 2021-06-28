@@ -1,31 +1,23 @@
-import { Grid } from '@material-ui/core';
-import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardHeader from '@material-ui/core/CardHeader';
-import Typography from '@material-ui/core/Typography';
+import { Avatar, Button, Card, CardActions, CardContent, CardHeader, Typography } from '@material-ui/core';
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { useStyles } from './styles';
 
 export default function CardUser() {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
+  const userState = useSelector((state) => state.user);
 
   return (
     <Card className={classes.root}>
       <CardHeader
-        avatar={<Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" className={classes.large} />}
-        title="Name"
-        subheader="User Name"
+        avatar={<Avatar alt="Remy Sharp" src={userState?.user.avatar_url} className={classes.large} />}
+        title={userState?.user.name}
+        subheader={userState?.user.login}
       />
       <CardContent>
         <Typography variant="body2" component="p">
-          {/* Bio */}
-          minha bio <br />
-          well meaning and kindly.
-          <br />a benevolent smile
+          {userState?.user.bio}
         </Typography>
       </CardContent>
       <CardActions>

@@ -9,4 +9,26 @@ export const useStyles = makeStyles((theme) => ({
       minHeight: theme.spacing(50),
     },
   },
+  containerPaper: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    margin: theme.spacing(1),
+    width: theme.spacing(80),
+    minHeight: theme.spacing(16),
+  },
+  containerInput: {
+    margin: theme.spacing(1),
+    width: '25ch',
+  },
+  iputText: {
+    marginTop: theme.spacing(2),
+    padding: theme.spacing(1),
+    // height: theme.spacing(1),
+  },
+  btn: {
+    marginBottom: theme.spacing(1),
+  },
+  logo: {
+    marginTop: theme.spacing(2),
+  },
 }));

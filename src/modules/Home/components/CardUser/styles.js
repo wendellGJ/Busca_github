@@ -6,15 +6,6 @@ export const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
     marginTop: theme.spacing(5),
     marginBottom: theme.spacing(5),
-
-    // [theme.breakpoints.down('sm')]: {
-    //   margin: theme.spacing(30),
-    // },
-  },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
   },
   title: {
     fontSize: 14,
