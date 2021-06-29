@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { asyncGetUser } from '../../store/ducks/user';
 import images from '../../utils/assets/imgs/index';
 import CardUser from './components/CardUser';
+import { TEXT } from './constants/texts';
 import { useStyles } from './styles';
 
 export default function Home() {
@@ -30,15 +31,15 @@ export default function Home() {
                   <Grid item className={classes.iputText} xs={12}>
                     <form onSubmit={handleSubmit(onSubmit)}>
                       <TextField
-                        label="Nome"
+                        label={TEXT.NAME}
                         variant="outlined"
                         size="small"
                         type="text"
-                        placeholder="Buscar usuário"
+                        placeholder={TEXT.INPUT}
                         {...register('name', {})}
                       />
-                      <Button variant="contained" size="small" color="primary" type="submit">
-                        Buscar
+                      <Button variant="contained" size="small" color="secondary" type="submit">
+                        {TEXT.BTN}
                       </Button>
                     </form>
                   </Grid>
@@ -48,7 +49,7 @@ export default function Home() {
           </Paper>
         </Grid>
         <Grid container item justify="center" alignItems="center" xs={12}>
-          {userState.error && <div>Usuário não encontrado :(</div>}
+          {userState.error && <div>{TEXT.ERROR}</div>}
           {userState.user && <CardUser />}
         </Grid>
       </Grid>

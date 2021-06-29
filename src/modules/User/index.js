@@ -76,17 +76,17 @@ export default function User() {
                   <CardActions>
                     <Grid container spacing={3}>
                       <Grid item xs={12} sm={4}>
-                        <Button variant="outlined" color="primary" onClick={handleClickAccessPerfil}>
+                        <Button variant="contained" color="secondary" onClick={handleClickAccessPerfil}>
                           {USER.ACCESS_GITHUB}
                         </Button>
                       </Grid>
                       <Grid item xs={12} sm={4}>
-                        <Button variant="outlined" color="primary" onClick={handleClickRepos}>
+                        <Button variant="contained" color="secondary" onClick={handleClickRepos}>
                           {USER.REPOS}
                         </Button>
                       </Grid>
                       <Grid item xs={12} sm={4}>
-                        <Button variant="outlined" color="primary" onClick={handleClickStarred}>
+                        <Button variant="contained" color="secondary" onClick={handleClickStarred}>
                           {USER.STARREDS}
                         </Button>
                       </Grid>
