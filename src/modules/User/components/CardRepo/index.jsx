@@ -5,6 +5,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { USER } from '../../constants/texts';
 import { useStyles } from './styles';
 
 export default function CardRepo({ repo }) {
@@ -25,15 +26,15 @@ export default function CardRepo({ repo }) {
           {repo.description}
         </Typography>
         <Typography className={classes.pos} color="textSecondary">
-          {`estrelas: ${repo.stargazers_count}`}
+          {`${USER.STARS} ${repo.stargazers_count}`}
         </Typography>
         <Typography className={classes.pos} color="textSecondary">
-          {`forks: ${repo.forks}`}
+          {`${USER.FORKS} ${repo.forks}`}
         </Typography>
       </CardContent>
       <CardActions>
         <Button size="small" onClick={handleClick}>
-          Acessar Repositório
+          {USER.ACCESS_REPO}
         </Button>
       </CardActions>
     </Card>

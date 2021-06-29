@@ -5,6 +5,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { USER } from '../../constants/texts';
 import { useStyles } from './styles';
 
 export default function CardStarred({ starred }) {
@@ -25,15 +26,15 @@ export default function CardStarred({ starred }) {
           {starred.description}
         </Typography>
         <Typography className={classes.pos} color="textSecondary">
-          {`estrelas: ${starred.stargazers_count}`}
+          {`${USER.STARS} ${starred.stargazers_count}`}
         </Typography>
         <Typography className={classes.pos} color="textSecondary">
-          {`forks: ${starred.forks}`}
+          {`${USER.FORKS} ${starred.forks}`}
         </Typography>
       </CardContent>
       <CardActions>
         <Button size="small" onClick={handleClick}>
-          Acessar repodsitório
+          {USER.ACCESS_REPO}
         </Button>
       </CardActions>
     </Card>
