@@ -1,6 +1,7 @@
 import { Grid, Typography } from '@material-ui/core';
 import React from 'react';
 import images from '../../assets/imgs';
+import { TEXT } from '../../constants/text';
 import { useStyles } from './styles';
 
 /**
@@ -18,7 +19,7 @@ export default function Footer() {
           <img src={images.GithubBig} alt="logo" className={classes.logo} />
         </Grid>
         <Grid item xs={6}>
-          <Typography className={classes.txtCompanhia}>Feito por Wendell Guimarães Júnior</Typography>
+          <Typography className={classes.txtCompanhia}>{TEXT.FOOTER}</Typography>
         </Grid>
       </Grid>
     </div>

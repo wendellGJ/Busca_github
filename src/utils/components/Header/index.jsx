@@ -2,6 +2,7 @@ import { Grid, Typography, Button } from '@material-ui/core';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import images from '../../assets/imgs';
+import { TEXT } from '../../constants/text';
 import { useStyles } from './styles';
 
 /**
@@ -25,7 +26,7 @@ export default function Footer() {
         </Grid>
         <Grid item xs={1} sm={2} />
         <Grid item xs={7} sm={5}>
-          <Typography className={classes.txtCompanhia}>Busa Usuáros Github</Typography>
+          <Typography className={classes.txtCompanhia}>{TEXT.HEADER}</Typography>
         </Grid>
         <Grid item xs={1} sm={2} />
       </Grid>
