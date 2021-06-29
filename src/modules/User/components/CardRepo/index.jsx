@@ -8,6 +8,10 @@ import React from 'react';
 import { USER } from '../../constants/texts';
 import { useStyles } from './styles';
 
+/**
+ * @CardRepo Componente responsável pela exibição do card com informações do repositório da lista de repositórios do usuário.
+ * @CriadoEm 27/06/2021
+ */
 export default function CardRepo({ repo }) {
   const classes = useStyles();
   const handleClick = () => {
@@ -40,6 +44,14 @@ export default function CardRepo({ repo }) {
     </Card>
   );
 }
+/**
+ * @prop name {string} nome do repositório do github
+ * @prop language {string} linguagem em que o projeto foi feito
+ * @prop description {string} descrição do projeto
+ * @prop svn_url {string} url para acessar o repositório no github via browser
+ * @prop forks {number} numero de forks do repositório
+ * @prop stargazers_count {number} numero de estrelas do repositório
+ */
 CardRepo.propTypes = {
   repo: PropTypes.shape({
     name: PropTypes.string,

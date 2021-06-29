@@ -5,6 +5,10 @@ import { useSelector } from 'react-redux';
 import { TEXT } from '../../constants/texts';
 import { useStyles } from './styles';
 
+/**
+ * @CardUser Componente responsável pela exibição do card com informações do usuário
+ * @CriadoEm 27/06/2021
+ */
 export default function CardUser() {
   const classes = useStyles();
   const userState = useSelector((state) => state.user);

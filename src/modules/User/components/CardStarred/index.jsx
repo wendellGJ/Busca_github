@@ -8,6 +8,10 @@ import React from 'react';
 import { USER } from '../../constants/texts';
 import { useStyles } from './styles';
 
+/**
+ * @CardRepo Componente responsável pela exibição do card com informações do repositório exibido em mais visitados.
+ * @CriadoEm 27/06/2021
+ */
 export default function CardStarred({ starred }) {
   const classes = useStyles();
   const handleClick = () => {
@@ -40,6 +44,14 @@ export default function CardStarred({ starred }) {
     </Card>
   );
 }
+/**
+ * @prop name {string} nome do repositório do github
+ * @prop language {string} linguagem em que o projeto foi feito
+ * @prop description {string} descrição do projeto
+ * @prop svn_url {string} url para acessar o repositório no github via browser
+ * @prop forks {number} numero de forks do repositório
+ * @prop stargazers_count {number} numero de estrelas do repositório
+ */
 CardStarred.propTypes = {
   starred: PropTypes.shape({
     name: PropTypes.string,

@@ -20,6 +20,10 @@ import CardStarred from './components/CardStarred';
 import { USER } from './constants/texts';
 import { useStyles } from './styles';
 
+/**
+ * @User Componente responsável pela exibição da pagina de Usuário e chamadas dos componentes da mesma.
+ * @CriadoEm 27/06/2021
+ */
 export default function User() {
   const classes = useStyles();
 

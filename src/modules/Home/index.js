@@ -8,6 +8,10 @@ import CardUser from './components/CardUser';
 import { TEXT } from './constants/texts';
 import { useStyles } from './styles';
 
+/**
+ * @Home Componente responsável pela exibição da pagina Home e chamadas dos componentes da mesma.
+ * @CriadoEm 27/06/2021
+ */
 export default function Home() {
   const classes = useStyles();
   const userState = useSelector((state) => state.user);
