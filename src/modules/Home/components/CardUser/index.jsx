@@ -1,4 +1,12 @@
-import { Avatar, Button, Card, CardActions, CardContent, CardHeader, Typography } from '@material-ui/core';
+import {
+  Avatar,
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  CardHeader,
+  Typography,
+} from '@material-ui/core';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -17,7 +25,9 @@ export default function CardUser() {
   return (
     <Card className={classes.root}>
       <CardHeader
-        avatar={<Avatar alt="Remy Sharp" src={userState?.user.avatar_url} className={classes.large} />}
+        avatar={
+          <Avatar alt="Remy Sharp" src={userState?.user.avatar_url} className={classes.avatar} />
+        }
         title={userState?.user.name}
         subheader={userState?.user.login}
       />

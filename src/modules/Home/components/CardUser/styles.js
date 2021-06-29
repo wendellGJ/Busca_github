@@ -7,13 +7,7 @@ export const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(5),
     marginBottom: theme.spacing(5),
   },
-  title: {
-    fontSize: 14,
-  },
-  pos: {
-    marginBottom: 12,
-  },
-  large: {
+  avatar: {
     width: theme.spacing(6),
     height: theme.spacing(6),
   },

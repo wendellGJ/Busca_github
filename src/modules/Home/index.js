@@ -24,29 +24,64 @@ export default function Home() {
   return (
     <>
       <Grid container spacing={1} className={classes.container}>
-        <Grid container item className={classes.containerPaper} justify="center" alignItems="center" xs={12}>
+        <Grid
+          container
+          item
+          className={classes.containerPaper}
+          justify="center"
+          alignItems="center"
+          xs={12}
+        >
           <Paper elevation={3}>
             <Grid container direction="row" justify="center" alignItems="center" spacing={3}>
-              <Grid item container direction="row" justify="center" alignItems="center" xs={12} sm={4}>
+              <Grid
+                item
+                container
+                direction="row"
+                justify="center"
+                alignItems="center"
+                xs={12}
+                sm={4}
+              >
                 <img src={images.GithubBig} alt="logo" className={classes.logo} />
               </Grid>
-              <Grid item container spacing={2} direction="row" justify="center" alignItems="center" xs={12} sm={6}>
-                <Grid item xs={12} className={classes.btn}>
-                  <Grid item className={classes.iputText} xs={12}>
-                    <form onSubmit={handleSubmit(onSubmit)}>
-                      <TextField
-                        label={TEXT.NAME}
-                        variant="outlined"
-                        size="small"
-                        type="text"
-                        placeholder={TEXT.INPUT}
-                        {...register('name', {})}
-                      />
-                      <Button variant="contained" size="small" color="secondary" type="submit">
-                        {TEXT.BTN}
-                      </Button>
-                    </form>
-                  </Grid>
+              <Grid
+                item
+                container
+                spacing={2}
+                direction="row"
+                justify="center"
+                alignItems="center"
+                xs={12}
+                sm={8}
+              >
+                <Grid item xs={12}>
+                  <form onSubmit={handleSubmit(onSubmit)}>
+                    <Grid container spacing={2}>
+                      <Grid item xs={12} className={classes.inputText}>
+                        <TextField
+                          label={TEXT.NAME}
+                          variant="outlined"
+                          color="secondary"
+                          size="small"
+                          type="text"
+                          placeholder={TEXT.INPUT}
+                          {...register('name', {})}
+                        />
+                      </Grid>
+                      <Grid item xs={12}>
+                        <Button
+                          variant="contained"
+                          size="small"
+                          color="secondary"
+                          type="submit"
+                          className={classes.btn}
+                        >
+                          {TEXT.BTN}
+                        </Button>
+                      </Grid>
+                    </Grid>
+                  </form>
                 </Grid>
               </Grid>
             </Grid>
