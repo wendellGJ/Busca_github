@@ -1,11 +1,13 @@
 import { Avatar, Button, Card, CardActions, CardContent, CardHeader, Typography } from '@material-ui/core';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useStyles } from './styles';
 
 export default function CardUser() {
   const classes = useStyles();
   const userState = useSelector((state) => state.user);
+  const pageUser = `/${userState?.user.login}`
 
   return (
     <Card className={classes.root}>
@@ -20,9 +22,11 @@ export default function CardUser() {
         </Typography>
       </CardContent>
       <CardActions>
+      <Link to={pageUser}>
         <Button variant="outlined" color="primary">
           Acessar Perfil
         </Button>
+        </Link>
       </CardActions>
     </Card>
   );
