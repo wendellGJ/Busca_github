@@ -8,7 +8,7 @@ export const appColors = {
   white: '#FFFFFF',
   Gray: '#4E4E4E',
   Red: '#E11919',
-  gren: '#43A047',
+  green: '#43A047',
   dividerBlue: '#66869B',
 };
 const AppTheme = createMuiTheme(
