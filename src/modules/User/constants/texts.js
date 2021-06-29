@@ -9,13 +9,3 @@ export const USER = {
   STARS: 'estrelas :',
   FORKS: 'forks :',
 };
-export const CARD_REPO = {
-  TITULO: 'titulo',
-  DESCRICAO: 'descricao',
-  LIDO: 'lido',
-};
-export const CARD_STARRED = {
-  TITULO: 'titulo',
-  DESCRICAO: 'descricao',
-  LIDO: 'lido',
-};
