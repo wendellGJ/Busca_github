@@ -56,8 +56,11 @@ Principais dependências do projeto:
 
 ## Melhorias a ser implementadas
 
-- Ajustar configurações dos testes que estão quebrando
+- Desacoplar o card de pesquisa no modulo Home do index criando um componente
+- Desacoplar o card com os dados de usuário do modulo User tirano do index e criando um componente para ele
 - Refatorar o modulo User a fim de não realizar uma nova requisição a api quando o usuário vier da pagina home através de uma busca
-- Implementar internacionalização
-- Adicionar constantes de rotas.
+- Melhorar tratamento de erro incluindo modais de erro e um redirect para home no caso de o usuário tentar acessar um usuário que não existe na tela do usuário
 - Refatorar toda Ui a fim de deixar com um aspecto mais bonito e amigável
+- Adicionar constantes de rotas.
+- Ajustar configurações dos testes que estão quebrando
+- Implementar internacionalização
