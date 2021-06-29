@@ -1,51 +1,25 @@
 import { makeStyles } from '@material-ui/core';
 
 export const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  containerFooterAbaixo: {
+  container: {
     backgroundColor: '#003040',
-    padding: theme.spacing(1, 4),
-  },
-  containerLogo: {
-    [theme.breakpoints.down('sm')]: {
-      alignItems: 'flex-start',
-      flexDirection: 'column',
-      textAlign: 'left',
-    },
+    padding: theme.spacing(2, 4),
     [theme.breakpoints.down('xs')]: {
-      alignItems: 'center',
-      flexDirection: 'column',
-      textAlign: 'center',
+      padding: theme.spacing(2, 3),
     },
   },
-
-  containerItensFooter: {
-    padding: theme.spacing(4, 0),
-  },
-
   txtCompanhia: {
     color: '#FFFFFF',
     fontSize: '14px',
     letterSpacing: '0.08px',
     lineHeight: '19px',
-    [theme.breakpoints.down('sm')]: {
-      textAlign: 'center',
-      padding: theme.spacing(1, 0),
-    },
+    textAlign: 'center',
+    paddingTop: theme.spacing(2),
   },
-
   logo: {
-    paddingRight: theme.spacing(2),
-    [theme.breakpoints.down('sm')]: {
-      padding: 0,
-    },
-  },
-  gridCompanhia: {
+    marginRight: theme.spacing(5),
     [theme.breakpoints.down('xs')]: {
-      paddingTop: theme.spacing(2),
-      justifyContent: 'center',
+      marginRight: theme.spacing(1),
     },
   },
 }));

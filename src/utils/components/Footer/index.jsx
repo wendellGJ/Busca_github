@@ -13,15 +13,9 @@ export default function Footer() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <Grid container spacing={3} justify="center" alignContent="center" className={classes.containerFooterAbaixo}>
-        <Grid item xs={6}>
-          <img src={images.GithubBig} alt="logo" className={classes.logo} />
-        </Grid>
-        <Grid item xs={6}>
-          <Typography className={classes.txtCompanhia}>{TEXT.FOOTER}</Typography>
-        </Grid>
-      </Grid>
-    </div>
+    <Grid container spacing={3} justify="space-between" alignContent="center" className={classes.container}>
+      <img src={images.GithubBig} alt="logo" className={classes.logo} />
+      <Typography className={classes.txtCompanhia}>{TEXT.FOOTER}</Typography>
+    </Grid>
   );
 }

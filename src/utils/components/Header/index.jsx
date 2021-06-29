@@ -17,19 +17,11 @@ export default function Footer() {
   };
 
   return (
-    <div className={classes.root}>
-      <Grid container spacing={3} justify="center" alignContent="center" className={classes.containerFooterAbaixo}>
-        <Grid item xs={3}>
-          <Button size="small" onClick={handleClick}>
-            <img src={images.HomeIcon} alt="logo" className={classes.logo} />
-          </Button>
-        </Grid>
-        <Grid item xs={1} sm={2} />
-        <Grid item xs={7} sm={5}>
-          <Typography className={classes.txtCompanhia}>{TEXT.HEADER}</Typography>
-        </Grid>
-        <Grid item xs={1} sm={2} />
-      </Grid>
-    </div>
+    <Grid container spacing={3} justify="space-between" alignContent="center" className={classes.container}>
+      <Button size="small" onClick={handleClick}>
+        <img src={images.HomeIcon} alt="logo" className={classes.logo} />
+      </Button>
+      <Typography className={classes.txtCompanhia}>{TEXT.HEADER}</Typography>
+    </Grid>
   );
 }
