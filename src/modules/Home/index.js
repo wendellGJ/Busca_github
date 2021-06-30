@@ -89,7 +89,7 @@ export default function Home() {
         </Grid>
         <Grid container item justify="center" alignItems="center" xs={12}>
           {userState.error && <div>{TEXT.ERROR}</div>}
-          {userState.user && <CardUser />}
+          {userState.user && <CardUser user={userState?.user} />}
         </Grid>
       </Grid>
     </>

@@ -7,9 +7,9 @@ import {
   CardHeader,
   Typography,
 } from '@material-ui/core';
+import { PropTypes } from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 import { TEXT } from '../../constants/texts';
 import { useStyles } from './styles';
 
@@ -17,23 +17,19 @@ import { useStyles } from './styles';
  * @CardUser Componente responsável pela exibição do card com informações do usuário
  * @CriadoEm 27/06/2021
  */
-export default function CardUser() {
+export default function CardUser({ user }) {
   const classes = useStyles();
-  const userState = useSelector((state) => state.user);
-  const pageUser = `/${userState?.user.login}`;
-
+  const pageUser = typeof user?.login === 'string' ? `/${user?.login}` : '/home';
   return (
     <Card className={classes.root}>
       <CardHeader
-        avatar={
-          <Avatar alt="Remy Sharp" src={userState?.user.avatar_url} className={classes.avatar} />
-        }
-        title={userState?.user.name}
-        subheader={userState?.user.login}
+        avatar={<Avatar alt="Remy Sharp" src={user?.avatar_url} className={classes.avatar} />}
+        title={user?.name}
+        subheader={user?.login}
       />
       <CardContent>
         <Typography variant="body2" component="p">
-          {userState?.user.bio}
+          {user?.bio}
         </Typography>
       </CardContent>
       <CardActions>
@@ -46,3 +42,25 @@ export default function CardUser() {
     </Card>
   );
 }
+/**
+ * @prop name {string} nome do usuário no github
+ * @prop login {string} login do usuário no github
+ * @prop bio {string} bio do usuario no github
+ * @prop avatar_url {string} url com imagem do usuario no github
+ */
+CardUser.propTypes = {
+  user: PropTypes.shape({
+    login: PropTypes.string,
+    name: PropTypes.string,
+    avatar_url: PropTypes.number,
+    bio: PropTypes.string,
+  }),
+};
+CardUser.defaultProps = {
+  user: {
+    login: '',
+    name: '',
+    avatar_url: '',
+    bio: '',
+  },
+};
