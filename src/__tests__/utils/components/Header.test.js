@@ -4,7 +4,7 @@
 import { ThemeProvider } from '@material-ui/core';
 import { createMount, createRender, createShallow } from '@material-ui/core/test-utils';
 import Enzyme from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import Adapter from 'enzyme-adapter-react-17-updated';
 import 'mutationobserver-shim';
 import React from 'react';
 import { Router } from 'react-router-dom';
