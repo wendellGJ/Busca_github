@@ -1,24 +1,13 @@
 import { makeStyles } from '@material-ui/core';
 
 export const useStyles = makeStyles((theme) => ({
-  container: {
-    // height: theme.spacing(100),
-    backgroundColor: '#f5f5f5',
-    minHeight: theme.spacing(75),
-    [theme.breakpoints.down('sm')]: {
-      minHeight: theme.spacing(50),
-    },
-  },
   root: {
-    minWidth: 275,
-  },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
-  },
-  title: {
-    fontSize: 14,
+    height: theme.spacing(49),
+    width: theme.spacing(40),
+    marginLeft: theme.spacing(2),
+    [theme.breakpoints.down('xs')]: {
+      width: theme.spacing(35),
+    },
   },
   pos: {
     marginBottom: 12,

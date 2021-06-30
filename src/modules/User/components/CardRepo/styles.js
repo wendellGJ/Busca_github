@@ -1,18 +1,15 @@
 import { makeStyles } from '@material-ui/core';
 
-export const useStyles = makeStyles({
+export const useStyles = makeStyles((theme) => ({
   root: {
-    minWidth: 275,
-  },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
-  },
-  title: {
-    fontSize: 14,
+    height: theme.spacing(49),
+    width: theme.spacing(40),
+    marginLeft: theme.spacing(2),
+    [theme.breakpoints.down('xs')]: {
+      width: theme.spacing(35),
+    },
   },
   pos: {
     marginBottom: 12,
   },
-});
+}));

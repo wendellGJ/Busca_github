@@ -15,6 +15,10 @@ export const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(5),
     marginBottom: theme.spacing(5),
   },
+  containerCard: {
+    paddingTop: theme.spacing(2),
+    paddingLeft: theme.spacing(2),
+  },
   cardHeader: {
     padding: '0px !important',
   },
@@ -30,5 +34,10 @@ export const useStyles = makeStyles((theme) => ({
   large: {
     width: theme.spacing(6),
     height: theme.spacing(6),
+  },
+  containerBtn: {
+    [theme.breakpoints.up('sm')]: {
+      minWidth: theme.spacing(65),
+    },
   },
 }));
