@@ -50,6 +50,11 @@ Principais dependências do projeto:
 # Execução do projeto
   npm start
 
+# links de acesso rodando o projeto localmente
+  qualquer url diferente de http://localhost:3000/user dá acesso a pagina home
+
+  para acessar diretamente a pagina de um usuário utilize  http://localhost:3000/user/'nome do usuário'
+
 # Execução dos testes
   yarn test
 ```

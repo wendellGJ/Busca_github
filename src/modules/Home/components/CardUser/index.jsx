@@ -19,7 +19,7 @@ import { useStyles } from './styles';
  */
 export default function CardUser({ user }) {
   const classes = useStyles();
-  const pageUser = typeof user?.login === 'string' ? `/${user?.login}` : '/home';
+  const pageUser = typeof user?.login === 'string' ? `/user/${user?.login}` : '/home';
   return (
     <Card className={classes.root}>
       <CardHeader
@@ -45,14 +45,14 @@ export default function CardUser({ user }) {
 /**
  * @prop name {string} nome do usuário no github
  * @prop login {string} login do usuário no github
- * @prop bio {string} bio do usuario no github
- * @prop avatar_url {string} url com imagem do usuario no github
+ * @prop bio {string} bio do usuário no github
+ * @prop avatar_url {string} url com imagem do usuário no github
  */
 CardUser.propTypes = {
   user: PropTypes.shape({
     login: PropTypes.string,
     name: PropTypes.string,
-    avatar_url: PropTypes.number,
+    avatar_url: PropTypes.string,
     bio: PropTypes.string,
   }),
 };
