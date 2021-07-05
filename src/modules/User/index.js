@@ -1,22 +1,11 @@
-import {
-  Avatar,
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  CardHeader,
-  Divider,
-  Grid,
-  Typography,
-} from '@material-ui/core';
-import React, { useState } from 'react';
+import { Grid, Typography } from '@material-ui/core';
+import React from 'react';
 import ReactLoading from 'react-loading';
-import { useDispatch, useSelector } from 'react-redux';
-import { asyncGetRepos } from '../../store/ducks/repos';
-import { asyncGetStarred } from '../../store/ducks/starred';
+import { useSelector } from 'react-redux';
 import useGitHubUser from '../../utils/helpers/useGitHubUser';
 import CardRepo from './components/CardRepo';
 import CardStarred from './components/CardStarred';
+import CardUser from './components/CardUser';
 import { USER } from './constants/texts';
 import { useStyles } from './styles';
 
@@ -29,20 +18,9 @@ export default function User() {
 
   const getLastItem = (thePath) => thePath.substring(thePath.lastIndexOf('/') + 1);
   useGitHubUser(getLastItem(document.URL));
-  const dispatch = useDispatch();
   const userState = useSelector((state) => state.user);
   const reposState = useSelector((state) => state.repos);
   const starredState = useSelector((state) => state.starred);
-
-  const handleClickRepos = () => {
-    dispatch(asyncGetRepos(userState?.user.login));
-  };
-  const handleClickStarred = () => {
-    dispatch(asyncGetStarred(userState?.user.login));
-  };
-  const handleClickAccessPerfil = () => {
-    window.open(userState?.user.html_url, '_blank');
-  };
 
   return (
     <>
@@ -55,58 +33,7 @@ export default function User() {
           <>
             <Grid container spacing={1} className={classes.container}>
               <Grid container item justify="center" alignItems="center" xs={12}>
-                <Card className={classes.card}>
-                  <CardContent>
-                    <Grid container direction="row" justify="space-between" alignItems="center">
-                      <Grid item xs={12}>
-                        <CardHeader
-                          avatar={
-                            <Avatar
-                              alt="Remy Sharp"
-                              src={userState?.user.avatar_url}
-                              className={classes.large}
-                            />
-                          }
-                          title={userState?.user.name}
-                          subheader={userState?.user.login}
-                          className={classes.cardHeader}
-                        />
-                      </Grid>
-                      {userState?.user.bio && (
-                        <>
-                          <Grid item xs={12}>
-                            <Typography variant="body2" component="p">
-                              {userState?.user.bio}
-                            </Typography>
-                          </Grid>
-                        </>
-                      )}
-                    </Grid>
-                  </CardContent>
-                  <CardActions className={classes.containerBtn}>
-                    <Grid container spacing={3}>
-                      <Grid item xs={12} sm={4}>
-                        <Button
-                          variant="contained"
-                          color="secondary"
-                          onClick={handleClickAccessPerfil}
-                        >
-                          {USER.ACCESS_GITHUB}
-                        </Button>
-                      </Grid>
-                      <Grid item xs={12} sm={4}>
-                        <Button variant="contained" color="secondary" onClick={handleClickRepos}>
-                          {USER.REPOS}
-                        </Button>
-                      </Grid>
-                      <Grid item xs={12} sm={4}>
-                        <Button variant="contained" color="secondary" onClick={handleClickStarred}>
-                          {USER.STARREDS}
-                        </Button>
-                      </Grid>
-                    </Grid>
-                  </CardActions>
-                </Card>
+                <CardUser user={userState?.user} />
               </Grid>
               <Grid container item justify="center" alignItems="center" xs={12}>
                 {(reposState.error || (reposState.repos && reposState.repos.length === 0)) && (

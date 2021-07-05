@@ -61,8 +61,6 @@ Principais dependências do projeto:
 
 ## Melhorias a ser implementadas
 
-- Desacoplar o card de pesquisa no modulo Home do index criando um componente e remover Grid's aninhados
-- Desacoplar o card com os dados de usuário do modulo User tirano do index e criando um componente para ele e remover Grid's aninhados
 - Refatorar o modulo User a fim de não realizar uma nova requisição a api quando o usuário vier da pagina home através de uma busca
 - Melhorar tratamento de erro incluindo modais de erro e um redirect para home no caso de o usuário tentar acessar um usuário que não existe na tela do usuário
 - Melhorar os loadings e usar o componente de skeleton no carregamento dos cards no modulo home ao buscar usuário e no modulo user ao listar os repositórios e os mais visitados.
